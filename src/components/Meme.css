@@ -1,0 +1,35 @@
+main {
+    padding: 36px;
+}
+
+.form {
+    display: grid;
+    grid-template: 100% 100% / 1fr 1fr;
+    gap: 5px;
+}
+
+.form--input {
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    height: 35px;
+    width: 90%;
+    margin-right: 5px;
+    text-indent: 5px;
+}
+
+.form--label {
+     margin-bottom: 5px;
+}
+
+.form--button {
+    color: white;
+    background-color: rgb(102, 43, 127);
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+}
