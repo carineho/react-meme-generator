@@ -4,12 +4,33 @@ import memesData from "../memesData";
 
 export default function Meme() {
 
-    const [img, setImg] = React.useState("")
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: "",
+        img: "http://i.imgflip.com/1bij.jpg",
+    })
 
     function getMemeImage() {
         const memeArray = memesData.data.memes;
         const randomNumber = Math.floor(Math.random() * memeArray.length);
-        setImg(memeArray[randomNumber].url);
+        const url = memeArray[randomNumber].url;
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                img: url
+            }
+        })
+    }
+
+    function handleChange(event) {
+        const { name, value } = event.target
+        // update topText and bottomText
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                [name]: value,
+            }
+        })
     }
 
     return (
@@ -19,7 +40,9 @@ export default function Meme() {
                     <label>Top Text
                         <input
                             type="text"
+                            name="topText"
                             className="form--input"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -27,7 +50,9 @@ export default function Meme() {
                     <label>Bottom Text
                         <input
                             type="text"
+                            name="bottomText"
                             className="form--input"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -35,7 +60,11 @@ export default function Meme() {
                     Generate meme image!
                 </button>
             </div>
-            <img src={img} className="meme--image" />
+            <div className="meme">
+                <img src={meme.img} className="meme--image" />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
         </main>
     )
 }

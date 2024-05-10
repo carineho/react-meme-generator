@@ -3,6 +3,7 @@
     background: rgb(38, 4, 53);
     height: 65px;
     align-items: center;
+    padding: 20px;
 }
 
 .header--title {
