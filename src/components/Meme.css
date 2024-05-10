@@ -22,14 +22,24 @@ main {
 }
 
 .form--button {
+    font-size: 18px;
     color: white;
     background-color: rgb(102, 43, 127);
     grid-column: 1 / -1;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    height: 35px;
-    width: 25%;
+    height: 40px;
+    width: 30%;
     margin-right: auto;
     margin-left: auto;
+    z-index: 1;
+}
+
+.meme--image {
+    padding-top: 80px;
+    height: 60%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
