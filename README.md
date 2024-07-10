@@ -10,7 +10,7 @@ It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Netlify
-The app has been deployed to Netlify, and it can be accessed using this [link](https://663d9c0a5441030008fa6147--fantastic-pony-fc0dfe.netlify.app/)
+The app has been deployed to Netlify.
 
 
 ## Scripts
